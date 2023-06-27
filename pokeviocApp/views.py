@@ -22,20 +22,20 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            # send_mail(
-            #     form.Meta.model.object,
-            #     form.Meta.model.content,
-            #     form.Meta.model.email,
-            #     [os.environ.get('ADMIN_EMAIL')],
-            #     fail_silently=False,
-            # )
             send_mail(
-                'Sujet de l\'e-mail',
-                'Contenu de l\'e-mail.',
-                'from@example.com',
-                ['tommy.preel.dev@gmail.com'],
+                form.Meta.model.object,
+                form.Meta.model.content,
+                form.Meta.model.email,
+                [os.environ.get('ADMIN_EMAIL')],
                 fail_silently=False,
             )
+            # send_mail(
+            #     'Sujet de l\'e-mail',
+            #     'Contenu de l\'e-mail.',
+            #     'from@example.com',
+            #     ['tommy.preel.dev@gmail.com'],
+            #     fail_silently=False,
+            # )
             # **********
             # Ajouter l'envoi de mail ici VERS L'ADMIN DU SITE (et pas du user)
             # Ou alors envoyer au user le fait que sa demande a été reçue
