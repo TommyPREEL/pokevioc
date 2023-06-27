@@ -1,0 +1,225 @@
+.header {
+    display: flex;
+    width: 1512px;
+    padding: 16px 32px;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-pages {
+    display: flex;
+    padding: 6px 0px;
+    align-items: flex-start;
+    gap: 56px;
+}
+.header-item {
+    color: #000;
+    font-size: 16px;
+    font-family: Lato;
+    font-weight: 300;
+    line-height: 15.6px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.header-logo {
+    width: 110px;
+    height: 32px;
+    flex-shrink: 0;
+}
+.body-content, .header, .footer {
+    width: 1512px;
+    background: #FFF;
+    margin: 0px auto;
+}
+a {
+    text-decoration:none !important;
+}
+.color-grey {
+    color: #18242E;
+}
+h1 {
+    color: #000;
+    font-size: 36px;
+    font-family: Lato;
+    font-weight: 700;
+    line-height: 46.8px;
+}
+h2 {
+    color: #18242E;
+    font-size: 30px;
+    font-family: Lato;
+    font-weight: 900;
+    line-height: 39px;
+    letter-spacing: 0.3px;
+}
+h3 {
+    color: #000;
+    text-align: center;
+    font-size: 24px;
+    font-family: Lato;
+    font-weight: 700;
+    line-height: 22.4px;
+}
+p {
+    color: #18242E;
+    font-size: 16px;
+    font-family: Lato;
+    font-weight: 300;
+    line-height: 22.4px;
+}
+.hero_1 {
+    display: flex;
+    width: 1202px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+}
+.hero_1 .hcontenu_1 {
+    display: flex;
+    width: 589px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    flex-shrink: 0;
+}
+.hero_1 .hcontenu_1 .paragraphe_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+}
+.hero_1 .hcontenu_1 .paragraphe_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+.hero_1 .hcontenu_1 .paragraphe_2 .text {
+    color: #000;
+    font-size: 16px;
+    font-family: Lato;
+    line-height: 22.4px;
+}
+.hero_1 .hcontenu_1 .paragraphe_3 .button {
+    display: flex;
+    padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #D03529;
+}
+.hero_1 .hcontenu_1 .paragraphe_3 .text {
+    color: #FFF;
+    font-size: 18px;
+    font-family: Lato;
+    font-weight: 700;
+    line-height: 22.4px;
+}
+.hero_1 .hcontenu_2 .img_hero {
+    width: 400px;
+    height: 466px;
+    flex-shrink: 0;
+}
+.hero_2 {
+    width: 100%;
+    height: 230.17px;
+    background: url(/static/media/hero/background.png), lightgray -20.824px 0px / 102.754% 100% no-repeat;
+    display: flex;
+    align-items: center;
+}
+.hero_2 .content {
+    width: 958px;
+    height: 150px;
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+}
+.hero_2 .img_hero_21 {
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+}
+.hero_2 .img_hero_22 {
+    width: 357px;
+    height: 142.92px;
+    flex-shrink: 0;
+}
+.hero_2 .part_2 {
+    display: flex;
+    width: 313px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.hero_2 .paragraphe_3 .button {
+    border-radius: 999px;
+    border: 2px solid #0061AF;
+    background: #FFF;
+    display: flex;
+    padding: 9px 23.8px 10.39px 26px;
+    align-items: flex-start;
+}
+.hero_2 .paragraphe_3 .button .text {
+    color: #0061AF;
+    font-size: 16px;
+    font-family: Lato;
+    font-weight: 700;
+    line-height: 22.4px;
+}
+.hero_3 {
+    display: flex;
+    width: 1512px;
+    height: 785px;
+    padding: 48px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    flex-shrink: 0;
+}
+.hero_3 .paragraphe_2 {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+.hero_3 .paragraphe_2 .content {
+    display: flex;
+    width: 467px;
+    height: 263px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: -999px;
+    border-radius: 8px;
+    justify-content: flex-end;
+}
+.hero_3 .paragraphe_2 .content .text {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+.hero_3 .paragraphe_2 .content .text .text_1 {
+    color: #FFF;
+    font-size: 12px;
+    font-family: Lato;
+    font-weight: 500;
+    line-height: 15.6px;
+    letter-spacing: 0.24px;
+}
+.hero_3 .paragraphe_2 .content .text .text_2 {
+    color: #FFF;
+    font-size: 24px;
+    font-family: Lato;
+    font-weight: 700;
+    line-height: 33.6px;
+    letter-spacing: 0.24px;
+}
+.hero_3 .paragraphe_3 {
+    
+}
+.hero_3 .paragraphe_4 {
+    
+}

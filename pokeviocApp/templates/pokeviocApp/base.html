@@ -17,20 +17,18 @@
         <img class="header-logo" src="{% static 'media/logo.png' %}" alt="Logo"/>
       </a>
     </div>
-    <a class="header-logo-a" href="{% url 'pokeviocApp:about' %}">
+    <!--<a class="header-logo-a" href="{% url 'pokeviocApp:about' %}">
       <p class="header-logo-text">Pokevioc</p>
-    </a>
+    </a>-->
     <div class="header-pages">
-      <a class="header-item {% if active_page == 'about' %}header-item-active{% endif %}" href="{% url 'pokeviocApp:about' %}"><i class="bi bi-house"></i> About</a>
-      <a class="header-item {% if active_page == 'services' %}header-item-active{% endif %}" href="{% url 'pokeviocApp:services_list' %}"><i class="bi bi-calendar-event"></i> Services</a>
-      <a class="header-item {% if active_page == 'contact' %}header-item-active{% endif %}" href="{% url 'pokeviocApp:contact' %}"><i class="bi bi-calendar-event"></i> Contact</a>
+      <a class="header-item {% if active_page == 'about' %}header-item-active{% endif %}" href="{% url 'pokeviocApp:about' %}">About</a>
+      <a class="header-item {% if active_page == 'services' %}header-item-active{% endif %}" href="{% url 'pokeviocApp:services_list' %}">Services</a>
+      <a class="header-item {% if active_page == 'contact' %}header-item-active{% endif %}" href="{% url 'pokeviocApp:contact' %}">Contact</a>
     </div>
   </nav>
   <body class="body">
-    <div class="body-content">
       {% block content %}
       {% endblock %}
-    </div>
   </body>
   <footer class="footer">
     <!-- <a href="{% url 'pokeviocApp:about' %}" class="footer-title">Event'Immediat</a>
@@ -41,6 +39,6 @@
         <a class="footer-menu-item" href="{% url 'pokeviocApp:services_list' %}"><i class="bi bi-calendar-check"></i> My events</a>
       {% endif %}
       </div> -->
-      <p class="footer-copyright">@Copyright Mat/Nic/Val/Tom 06/2023</p>
+      <p class="footer-copyright"><a class="color-grey" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">@</a>Copyright Mat/Nic/Val/Tom 06/2023</p>
   </footer>
 </html>
