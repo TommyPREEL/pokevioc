@@ -1,0 +1,20 @@
+{% extends "pokeviocApp/base.html" %}
+
+{% block content %}
+    <div>
+        <div class="row">
+        {% if services.count != 0 %}
+            {% for service in services %}
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                    <div class="card mb-2" style="width: 21rem;">
+                        <h5 class="card-title">{{ service.title }} | ${{ service.price }}</h5>
+                        <p class="card-text">{{ service.content }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+                <p>Any service found.</p>
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}

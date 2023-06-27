@@ -1,0 +1,22 @@
+{% extends "pokeviocApp/base.html" %}
+
+{% block content %}
+
+<div class="d-flex justify-content-center">
+    <div class="card" style="width: 26rem;">
+        <div class="card-body d-flex justify-content-center">
+            <form method="post">
+                {% csrf_token %}
+                <h1 class="d-flex justify-content-center"><b>Contact us</b></h1>
+                <p>Email :</p>{{ form.email }}<br><br>
+                <p>Name :</p>{{ form.name }}<br><br>
+                <p>Object :</p>{{ form.object }}<br><br>
+                <p>Content :</p>{{ form.content }}<br><br>
+                <a class="btn btn-danger w-100" href="{% url 'pokeviocApp:services_list' %}">Cancel <i class="bi bi-x"></i></a>
+                <button class="btn btn-success w-100 mt-2" type="submit">Send message <i class="bi bi-check-lg"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+{{test}}
+{% endblock %}
