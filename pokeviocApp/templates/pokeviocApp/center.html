@@ -1,5 +1,51 @@
 {% extends 'pokeviocApp/base.html' %}
 {% load static %}
 {% block content %}
-
+<div id="center" class="body-content ">
+    <div class="content_1">
+        <div class="dcontent">
+            <div class="text_1">Nous avons une présences national</div>
+            <div class="text_2">Nous avons des centres pokévioc un peu partout autour de Kanto.</div>
+        </div>
+        <div class="carte">
+            <img src="{% static 'media/kanto.svg' %}" class="img_kanto" />
+        </div>
+        <div class="reasurment">
+            <div class="item">
+                <div class="item_1">
+                    <div class="t1" style="background: rgba(5, 255, 0, 0.25);"><img src="{% static 'media/reasurance/Stethoscope.svg' %}" class="log_rea" /></div>
+                    <div class="t2">
+                        <div class="text_1">Médecins</div>
+                        <div class="text_2">Des médecins qualifié</div>
+                    </div>
+                </div>
+                <div class="item_2">Pour en savoir plus sur nos médecins vous pouvez nous contacter à contact@pokévioc.fr</div>
+            </div>
+            <div class="item">
+                <div class="item_1">
+                    <div class="t1" style="background: rgba(255, 0, 0, 0.25);"><img src="{% static 'media/reasurance/icon.svg' %}" class="log_rea" /></div>
+                    <div class="t2">
+                        <div class="text_1">Soutien</div>
+                        <div class="text_2">Un soutien permanent</div>
+                    </div>
+                </div>
+                <div class="item_2">Pour éviter tout malêtre de nos résidents, nous leur apportons un soutien émotionnel permanent.</div>
+            </div>
+            <div class="item">
+                <div class="item_1">
+                    <div class="t1" style="background: rgba(255, 245, 0, 0.25);"><img src="{% static 'media/reasurance/Information.svg' %}" class="log_rea" /></div>
+                    <div class="t2">
+                        <div class="text_1">Protection</div>
+                        <div class="text_2">Une protection à la pointe</div>
+                    </div>
+                </div>
+                <div class="item_2">Pour obtenir les meilleurs scores dans nos leaderboard, nous avons une base virale VPS à jours de tout virus.</div>
+            </div>
+        </div>
+        <div class="dcontent">
+            <div class="text_1">Découvrez notre équipe</div>
+            <div class="text_2">Notre philosophie est simple — recruter une équipe diverse et passionné par leur métier.</div>
+        </div>
+    </div>
+</div>
 {% endblock %}
