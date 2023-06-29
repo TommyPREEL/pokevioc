@@ -36,7 +36,7 @@
                 <p>Remplissez le formulaire de contact pour commencer à laisser vos Pokévioc !</p>
             </div>
             <div class="paragraphe_3">
-                <a href="#">
+                <a href="{% url 'pokeviocApp:contact' %}">
                     <div class="button">
                         <div class="text">Contact</div>
                     </div>
@@ -49,31 +49,117 @@
     </div>
 </div>
 
-<div class="body-content hero_3">
-    <div class="paragraphe_1">
-        <h3>Nos différents services</h3>
-    </div>
-    <div class="paragraphe_2">
-        <a href="#">
-            <div class="content" style="background: url({% static 'media/service/pokemon-center.png' %}), lightgray 50% / cover no-repeat;">
-                <div class="text">
-                    <div class="text_1">CENTRE POKÉVIOC</div>
-                    <div class="text_2">Un établissement pensé pour les soins.</div>
+<div class="hero_3">
+    <div class="body-content hero_3_in">
+        <div class="paragraphe_1">
+            <h3>Nos différents services</h3>
+        </div>
+        <div class="paragraphe_2">
+            <a href="#">
+                <div class="content" style="background: url({% static 'media/service/pokemon-center.png' %}), lightgray 50% / cover no-repeat;">
+                    <div class="text">
+                        <div class="text_1">CENTRE POKÉVIOC</div>
+                        <div class="text_2">Un établissement pensé pour les soins.</div>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="content" style="background: url({% static 'media/service/saumon.png' %}), lightgray 50% / cover no-repeat;">
-                <div class="text">
-                    <div class="text_1">NOURRITURE HAUT DE GAMME</div>
-                    <div class="text_2">Des poissons frais de nos régions !</div>
+            </a>
+            <a href="#">
+                <div class="content" style="background: url({% static 'media/service/saumon.png' %}), lightgray 50% / cover no-repeat;">
+                    <div class="text">
+                        <div class="text_1">NOURRITURE HAUT DE GAMME</div>
+                        <div class="text_2">Des poissons frais de nos régions !</div>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
+        <div class="paragraphe_3">
+            <a href="#">
+                <div class="content" style="background: url({% static 'media/service/pokemon-center.png' %}), lightgray 50% / cover no-repeat;">
+                    <div class="text">
+                        <div class="text_1">CENTRE POKÉVIOC</div>
+                        <div class="text_2">Un établissement pensé pour les soins.</div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="content" style="background: url({% static 'media/service/pokemon-center.png' %}), lightgray 50% / cover no-repeat;">
+                    <div class="text">
+                        <div class="text_1">CENTRE POKÉVIOC</div>
+                        <div class="text_2">Un établissement pensé pour les soins.</div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="content" style="background: url({% static 'media/service/pokemon-center.png' %}), lightgray 50% / cover no-repeat;">
+                    <div class="text">
+                        <div class="text_1">CENTRE POKÉVIOC</div>
+                        <div class="text_2">Un établissement pensé pour les soins.</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="paragraphe_4">
+            <a href="{% url 'pokeviocApp:services_list' %}"><div class="text">
+                Voir les services
+            </div></a>
+        </div>
     </div>
-    <div class="paragraphe_3"></div>
-    <div class="paragraphe_4"></div>
 </div>
+<div class="hero_4">
+    <div class="hero_4_in">
+        <div class="content_1">
+            <div>
+                <div class="text_1">Contactez nous</div>
+                <div class="text_2">Un devis rapide pour un de nos centre Pokévioc</div>
+            </div>
+            <div class="form-contact">
+                <form method="post" class="needs-validation" novalidate>
+                    {% csrf_token %}
+                
+                    <div class="form-group">
+                        <label for="{{ form.email.id_for_label }}">Email :</label>
+                        {{ form.email }}
+                        <div class="invalid-feedback">
+                            {{ form.email.errors }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="{{ form.name.id_for_label }}">Nom :</label>
+                        {{ form.name }}
+                        <div class="invalid-feedback">
+                            {{ form.name.errors }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="{{ form.object.id_for_label }}">Sujet :</label>
+                        {{ form.object }}
+                        <div class="invalid-feedback">
+                            {{ form.object.errors }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="{{ form.content.id_for_label }}">Message :</label>
+                        {{ form.content }}
+                        <div class="invalid-feedback">
+                            {{ form.content.errors }}
+                        </div>
+                    </div>
+                    <br>
+                    <button class="btn-form" type="submit">
+                        <img src="{% static 'media/hero/pokeball.png' %}" class="ball" /> Obtenir un devis
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="content_2">
+            <img class="img_joel" src="{% static 'media/hero/joelw.svg' %}" />
+        </div>
+    </div>
+</div>
+<<<<<<< Updated upstream
 
 <div class="d-flex justify-content-center">
     <div class="card" style="width: 26rem;">
@@ -91,4 +177,6 @@
         </div>
     </div>
 </div>
+=======
+>>>>>>> Stashed changes
 {% endblock %}
