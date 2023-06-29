@@ -152,3 +152,5 @@ EMAIL_USE_SSL = False
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'pokeviocApp/static/media')
 MEDIA_URL = 'media/'
+
+DEFAULT_FROM_EMAIL = 'someone@gmail.com'

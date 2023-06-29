@@ -3,6 +3,7 @@ from pokeviocApp.forms import ContactForm
 from pokeviocApp.models import Contact, Service
 from django.core.mail import send_mail
 import os
+from django.conf import settings
 
 # Create your views here.
 
@@ -12,7 +13,6 @@ def about(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()
             send_mail(
                 form.cleaned_data['object'],
                 form.cleaned_data['content'],
@@ -20,6 +20,7 @@ def about(request):
                 [os.environ.get('ADMIN_EMAIL')],
                 fail_silently=False,
             )
+            form.save()
             return redirect('pokeviocApp:about')
     else:
         form = ContactForm()
@@ -31,14 +32,15 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()
+            settings.DEFAULT_FROM_EMAIL = form.cleaned_data['email']
             send_mail(
                 form.cleaned_data['object'],
                 form.cleaned_data['content'],
-                form.cleaned_data['email'],
-                [os.environ.get('ADMIN_EMAIL')],
-                fail_silently=False,
+                settings.DEFAULT_FROM_EMAIL,
+                [settings.EMAIL_HOST_USER],
+                fail_silently=False
             )
+            form.save()
             return redirect('pokeviocApp:services_list')
     else:
         form = ContactForm()
