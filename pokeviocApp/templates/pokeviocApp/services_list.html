@@ -1,5 +1,5 @@
 {% extends "pokeviocApp/base.html" %}
-
+{% load static %}
 {% block content %}
     <div>
         <div class="row">
@@ -9,6 +9,7 @@
                     <div class="card mb-2" style="width: 21rem;">
                         <h5 class="card-title">{{ service.title }} | ${{ service.price }}</h5>
                         <p class="card-text">{{ service.content }}</p>
+                        <img class="img_hero_21" src="{% static 'media/' %}{{service.image}}"/>
                     </div>
                 </div>
             {% endfor %}

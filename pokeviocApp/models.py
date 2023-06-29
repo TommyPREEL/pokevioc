@@ -13,4 +13,5 @@ class Service(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
     price = models.IntegerField(max_length=255)
+    image = models.ImageField(upload_to = 'service/')
     

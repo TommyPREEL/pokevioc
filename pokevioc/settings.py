@@ -149,3 +149,6 @@ EMAIL_HOST_PASSWORD = 'eibdvqhoamxowwnz'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'pokeviocApp/static/media')
+MEDIA_URL = 'media/'

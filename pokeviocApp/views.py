@@ -3,9 +3,6 @@ from pokeviocApp.forms import ContactForm
 from pokeviocApp.models import Contact, Service
 from django.core.mail import send_mail
 import os
-# from dotenv import load_dotenv
-
-# load_dotenv()
 
 # Create your views here.
 
