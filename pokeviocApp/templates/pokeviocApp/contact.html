@@ -5,7 +5,7 @@
 <div class="d-flex justify-content-center">
     <div class="card" style="width: 26rem;">
         <div class="card-body d-flex justify-content-center">
-            <form method="post">
+            <form method="post" name="contact">
                 {% csrf_token %}
                 <h1 class="d-flex justify-content-center"><b>Contact us</b></h1>
                 <p>Email :</p>{{ form.email }}<br><br>
@@ -18,5 +18,5 @@
         </div>
     </div>
 </div>
-{{test}}
+{{request}}
 {% endblock %}

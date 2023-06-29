@@ -9,12 +9,25 @@ import os
 # Function to render the home page
 def about(request):
     active_page = 'about'
-    return render(request, 'pokeviocApp/about.html', {'active_page': active_page})
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            send_mail(
+                form.cleaned_data['object'],
+                form.cleaned_data['content'],
+                form.cleaned_data['email'],
+                [os.environ.get('ADMIN_EMAIL')],
+                fail_silently=False,
+            )
+            return redirect('pokeviocApp:about')
+    else:
+        form = ContactForm()
+        return render(request, 'pokeviocApp/about.html', {'form': form, 'active_page': active_page})
 
 # Function to render the contact page
 def contact(request):
     active_page = 'contact'
-    test = os.environ.get('ADMIN_EMAIL')
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -29,7 +42,7 @@ def contact(request):
             return redirect('pokeviocApp:services_list')
     else:
         form = ContactForm()
-        return render(request, 'pokeviocApp/contact.html', {'form': form, 'active_page': active_page, 'test': test})
+        return render(request, 'pokeviocApp/contact.html', {'form': form, 'active_page': active_page})
 
 def services_list(request):
     active_page = 'services'
