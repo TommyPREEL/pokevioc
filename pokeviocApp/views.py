@@ -26,6 +26,10 @@ def about(request):
         form = ContactForm()
         return render(request, 'pokeviocApp/about.html', {'form': form, 'active_page': active_page})
 
+def center(request):
+    active_page = 'center'
+    return render(request, 'pokeviocApp/center.html', {'active_page': active_page})
+
 # Function to render the contact page
 def contact(request):
     active_page = 'contact'
