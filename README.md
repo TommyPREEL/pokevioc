@@ -68,7 +68,7 @@ python manage.py runserver
 ### - Envoyer un mail de contact
 
 ## Documentation
-### Un document expliquant chaque dossier ainsi que la réalisation de la maquette est disponible sur le fichier .odt à la racine du projet
+### Un document expliquant chaque dossier ainsi que la réalisation de la maquette est disponible à la racine du projet : Documentation_pokevioc.odt
 
 
 
