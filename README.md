@@ -67,5 +67,8 @@ python manage.py runserver
 ### - Voir la page de contact
 ### - Envoyer un mail de contact
 
+## Documentation
+### Un document expliquant chaque dossier ainsi que la réalisation de la maquette est disponible sur le fichier .odt à la racine du projet
+
 
 
