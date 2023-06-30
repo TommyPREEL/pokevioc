@@ -10,6 +10,7 @@ from django.conf import settings
 # Function to render the home page
 def about(request):
     active_page = 'about'
+    services = Service.objects.all().order_by('-title')
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -24,7 +25,7 @@ def about(request):
             return redirect('pokeviocApp:about')
     else:
         form = ContactForm()
-        return render(request, 'pokeviocApp/about.html', {'form': form, 'active_page': active_page})
+        return render(request, 'pokeviocApp/about.html', {'services': services,'form': form, 'active_page': active_page})
 
 def center(request):
     active_page = 'center'

@@ -65,34 +65,35 @@
             <div class="text_2">Un établissement pensé pour les soins.</div>
           </div>
         </div>
-      </a>
-      <a href="#">
-        <div class="content"
-             style="background: url({% static 'media/service/saumon.png' %}), lightgray 50% / cover no-repeat;">
-          <div class="text">
-            <div class="text_1">NOURRITURE HAUT DE GAMME</div>
-            <div class="text_2">Des poissons frais de nos régions !</div>
-          </div>
+        <div class="paragraphe_2">
+            {% if services.count != 0 %}
+                {% for service in services|slice:":2" %}
+                    <div class="content" style="background: url({% static 'media/' %}{{service.image}}), lightgray 50% / cover no-repeat;">
+                        <div class="text">
+                            <div class="text_1">{{ service.title }} | {{ service.price }} $</div>
+                            <div class="text_2">{{ service.content }}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                    <p>Aucun service trouvé.</p>
+            {% endif %}
         </div>
-      </a>
-    </div>
-    <div class="paragraphe_3">
-      <a href="#">
-        <div class="content"
-             style="background: url({% static 'media/service/pokemon-center.png' %}), lightgray 50% / cover no-repeat;">
-          <div class="text">
-            <div class="text_1">CENTRE POKÉVIOC</div>
-            <div class="text_2">Un établissement pensé pour les soins.</div>
-          </div>
-        </div>
-      </a>
-      <a href="#">
-        <div class="content"
-             style="background: url({% static 'media/service/pokemon-center.png' %}), lightgray 50% / cover no-repeat;">
-          <div class="text">
-            <div class="text_1">CENTRE POKÉVIOC</div>
-            <div class="text_2">Un établissement pensé pour les soins.</div>
-          </div>
+        <div class="paragraphe_3">
+            {% if services.count != 0 %}
+                {% for service in services %}
+                    {% if forloop.counter > 2 %}
+                        {% if forloop.counter <= 5 %}
+                        <div class="content" style="background: url({% static 'media/' %}{{service.image}}), lightgray 50% / cover no-repeat;">
+                            <div class="text">
+                                <div class="text_1">{{ service.title }} | {{ service.price }} $</div>
+                                <div class="text_2">{{ service.content }}</div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
         </div>
       </a>
       <a href="#">
