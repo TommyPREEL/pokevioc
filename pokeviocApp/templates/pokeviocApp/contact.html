@@ -3,57 +3,63 @@
 {% block content %}
 
 <div class="hero_4">
-    <div class="hero_4_in">
-        <div class="content_1">
-            <div>
-                <div class="text_1">Contactez nous</div>
-                <div class="text_2">Un devis rapide pour un de nos centre Pokévioc</div>
+  <div class="hero_4_in">
+    <div class="content_1">
+      <div>
+        <div class="text_1">Contactez nous</div>
+        <div class="text_2">Un devis rapide pour un de nos centre Pokévioc</div>
+      </div>
+      <div class="form-contact">
+        <audio
+          id="audio-pokemon"
+          src="{% static '/media/pokemon_healing_sound.mp3' %}">
+        </audio>
+        <form id="contact-form" method="post" class="needs-validation" novalidate>
+          {% csrf_token %}
+
+          <div class="form-group">
+            <label for="{{ form.email.id_for_label }}">Email :</label>
+            {{ form.email }}
+            <div class="invalid-feedback">
+              {{ form.email.errors }}
             </div>
-            <div class="form-contact">
-                <form method="post" class="needs-validation" novalidate>
-                    {% csrf_token %}
-                
-                    <div class="form-group">
-                        <label for="{{ form.email.id_for_label }}">Email :</label>
-                        {{ form.email }}
-                        <div class="invalid-feedback">
-                            {{ form.email.errors }}
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="{{ form.name.id_for_label }}">Nom :</label>
-                        {{ form.name }}
-                        <div class="invalid-feedback">
-                            {{ form.name.errors }}
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="{{ form.object.id_for_label }}">Sujet :</label>
-                        {{ form.object }}
-                        <div class="invalid-feedback">
-                            {{ form.object.errors }}
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="{{ form.content.id_for_label }}">Message :</label>
-                        {{ form.content }}
-                        <div class="invalid-feedback">
-                            {{ form.content.errors }}
-                        </div>
-                    </div>
-                    <br>
-                    <button class="btn-form" type="submit">
-                        <img src="{% static 'media/hero/pokeball.png' %}" class="ball" /> Obtenir un devis
-                    </button>
-                </form>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="{{ form.name.id_for_label }}">Nom :</label>
+            {{ form.name }}
+            <div class="invalid-feedback">
+              {{ form.name.errors }}
             </div>
-        </div>
-        <div class="content_2">
-            <img class="img_joel" src="{% static 'media/hero/joelw.svg' %}" />
-        </div>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="{{ form.object.id_for_label }}">Sujet :</label>
+            {{ form.object }}
+            <div class="invalid-feedback">
+              {{ form.object.errors }}
+            </div>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="{{ form.content.id_for_label }}">Message :</label>
+            {{ form.content }}
+            <div class="invalid-feedback">
+              {{ form.content.errors }}
+            </div>
+          </div>
+          <br>
+          <button class="btn-form" type="submit">
+            <img src="{% static 'media/hero/pokeball.png' %}" class="ball"/> Obtenir un devis
+          </button>
+        </form>
+      </div>
     </div>
+    <div class="content_2">
+      <img class="img_joel" src="{% static 'media/hero/joelw.svg' %}"/>
+    </div>
+  </div>
 </div>
+
+<script src="{% static 'js/form-validation.js' %}"></script>
 {% endblock %}
